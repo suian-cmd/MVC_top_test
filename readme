@@ -1,0 +1,16 @@
+如果没有/node_modules/
+则npm init
+ npm install jquery
+
+运行
+parcel index.html
+
+将项目打包，打包后可直接访问dist/index.html文件，但最后还是在http-server -c-1下访问
+parcel build index.html --public-url ./ --no-optimize  
+
+如果出现Target "main" declares an output file path of "index.js" which does not match the compiled bundle type "html"...问题
+修改package.json文件，删除"main": "index.js"
+
+因为当你的package.json中存在main这个字段的配置时, parcel会认为你在开发一个library,
+此处问题是 build 的是html，package.json 中的main配置的是js，两者文件类型不一致，parcel迷糊了，
+所以删除main这个配置即可；

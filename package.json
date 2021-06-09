@@ -1,0 +1,18 @@
+{
+  "name": "mvc",
+  "version": "1.0.0",
+  "description": "如果没有/node_modules/\r 则npm init\r  npm install jquery",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "parcel": "^2.0.0-beta.2"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.5",
+    "postcss": "^8.3.0"
+  }
+}
